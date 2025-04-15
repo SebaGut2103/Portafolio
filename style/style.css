@@ -1,0 +1,42 @@
+body {
+    margin: 0;
+    overflow: hidden;
+    font-family: 'Orbitron', sans-serif;
+    background: linear-gradient(180deg, #1e1e2f, #283048, #4b79a1); /* Initial gradient */
+    color: #00d4ff; /* Neon blue for text */
+    animation: gradient 8s ease infinite; /* Animated background */
+}
+
+@keyframes gradient {
+    0% {
+        background: linear-gradient(180deg, #1e1e2f, #283048, #4b79a1); /* Dark blue tones */
+    }
+    25% {
+        background: linear-gradient(180deg, #232526, #414345, #6a82fb); /* Gray to soft blue */
+    }
+    50% {
+        background: linear-gradient(180deg, #0f2027, #203a43, #2c5364); /* Deep ocean tones */
+    }
+    75% {
+        background: linear-gradient(180deg, #1c1c2b, #302b63, #24243e); /* Purple and dark tones */
+    }
+    100% {
+        background: linear-gradient(180deg, #1e1e2f, #283048, #4b79a1); /* Return to initial */
+    }
+}
+
+canvas#sprite {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    pointer-events: none; 
+}
+
+
+main {
+    position: relative;
+    z-index: 10; 
+}
