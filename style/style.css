@@ -1,42 +1,126 @@
+html,
 body {
-    margin: 0;
-    overflow: hidden;
-    font-family: 'Orbitron', sans-serif;
-    background: linear-gradient(180deg, #1e1e2f, #283048, #4b79a1); /* Initial gradient */
-    color: #00d4ff; /* Neon blue for text */
-    animation: gradient 8s ease infinite; /* Animated background */
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+#home {
+  margin: 0;
+  overflow-x: hidden;
+  font-family: 'Orbitron', sans-serif;
+  background: linear-gradient(180deg, #1e1e2f, #283048, #4b79a1);
+  color: #00d4ff;
+  display: flex;
+  flex-direction: column;
+  animation: gradient 8s ease infinite;
 }
 
 @keyframes gradient {
-    0% {
-        background: linear-gradient(180deg, #1e1e2f, #283048, #4b79a1); /* Dark blue tones */
-    }
-    25% {
-        background: linear-gradient(180deg, #232526, #414345, #6a82fb); /* Gray to soft blue */
-    }
-    50% {
-        background: linear-gradient(180deg, #0f2027, #203a43, #2c5364); /* Deep ocean tones */
-    }
-    75% {
-        background: linear-gradient(180deg, #1c1c2b, #302b63, #24243e); /* Purple and dark tones */
-    }
-    100% {
-        background: linear-gradient(180deg, #1e1e2f, #283048, #4b79a1); /* Return to initial */
-    }
+  0% {
+    background: linear-gradient(180deg, #1e1e2f, #283048, #4b79a1);
+  }
+
+  25% {
+    background: linear-gradient(180deg, #232526, #414345, #6a82fb);
+  }
+
+  50% {
+    background: linear-gradient(180deg, #0f2027, #203a43, #2c5364);
+  }
+
+  75% {
+    background: linear-gradient(180deg, #1c1c2b, #302b63, #24243e);
+  }
+
+  100% {
+    background: linear-gradient(180deg, #1e1e2f, #283048, #4b79a1);
+  }
+}
+
+h1 {
+  animation: bounce 1.5s infinite ease-in-out;
+  
+}
+
+@keyframes bounce {
+
+  0%,
+  100% {
+    transform: translateY(0);
+
+  }
+
+  50% {
+    transform: translateY(-10px);
+
+  }
 }
 
 canvas#sprite {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 0;
-    pointer-events: none; 
+  position: absolute;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 1;
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+section {
+  scroll-snap-align: start;
+  height: 100vh;
+  width: 100%;
+}
+.reveal {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.8s ease-out;
 }
 
 
-main {
-    position: relative;
-    z-index: 10; 
+
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Desde abajo */
+.reveal-up {
+  transform: translateY(40px);
+}
+.reveal-up.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Desde arriba */
+.reveal-down {
+  transform: translateY(-40px);
+}
+.reveal-down.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Desde la izquierda */
+.reveal-left {
+  transform: translateX(-40px);
+}
+.reveal-left.active {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Desde la derecha */
+.reveal-right {
+  transform: translateX(40px);
+}
+.reveal-right.active {
+  opacity: 1;
+  transform: translateX(0);
 }

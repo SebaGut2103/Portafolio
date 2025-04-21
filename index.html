@@ -2,22 +2,60 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Portfolio</title>
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet" />
-    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet" />
-    <link rel="stylesheet" href="style/style.css" />
-    <link rel="shortcut icon" href="img/5930147.png" type="image/x-icon">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet" />
+  <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="style/style.css" />
+  <link rel="shortcut icon" href="img/5930147.png" type="image/x-icon">
 </head>
 
-<body class="h-screen w-screen overflow-hidden relative">
-    <main class="z-10 relative flex h-full w-full items-center justify-center">
-        <h1 class="text-4xl font-orbitron text-blue-400">Welcome to My Portfolio</h1>
+<body class="w-screen relative font-orbitron">
+  <section id="home" class="reveal">
+    <!-- Welcome Section -->
+    <main id="welcome" class="z-10 relative flex h-screen w-full items-center justify-center">
+      <h1 class="text-4xl text-blue-400">
+        Bienvenido a mi Portafolio
+      </h1>
     </main>
-    
-    <canvas id="sprite" class="absolute top-0 left-0 w-full h-full z-0"></canvas>
+
+   
+    <canvas id="sprite" class="absolute top-0 left-0 w-full h-full z-0 pointer-events-none"></canvas>
+  </section>
+ 
+
+<section id="about"
+class="w-screen min-h-screen flex flex-col items-center justify-center bg-gray-900 text-white p-8">
+
+<div class="flex flex-col md:flex-row items-center gap-8">
+  <!-- Picture -->
+  <div class="w-64 h-64 rounded-full overflow-hidden shadow-lg reveal reveal-left">
+    <img src="img/5930147.png" alt="Your Picture" class="w-full h-full object-cover">
+  </div>
+
+  <!-- Description -->
+  <div class="text-center md:text-left max-w-lg reveal reveal-right">
+    <h2 class="text-3xl font-bold mb-4">Sobre mí</h2>
+    <p class="text-lg leading-relaxed">
+      Hola! Mi nombre es Juan Sebastian Gutierrez Fuentes, soy programador Fullstack, especializado en Java,
+      JavaScript, Python, MySQL, HTML y CSS. Actualmente estudio en Campuslands, donde he desarrollado tanto
+       mis habilidades técnicas como mis habilidades blandas. Me interesa aprender constantemente y 
+       disfruto enfrentarme a nuevos retos que impulsen mi crecimiento profesional.
+  </div>
+</div>
+
+
+<div class="mt-8 w-full max-w-2xl reveal reveal-up">
+  <video controls class="w-full rounded-lg shadow-lg">
+    <source src="video/your-video.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+</div>
+</section>
+
+
+  <script src="js/index.js"></script>
 </body>
-<script src="js/index.js"></script>
 
 </html>
