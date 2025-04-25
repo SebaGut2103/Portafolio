@@ -12,6 +12,21 @@
 </head>
 
 <body class="w-screen relative font-orbitron">
+  
+  <header class="bg-gray-900 shadow-lg sticky top-0 z-50">
+    <nav class="flex items-center justify-between p-4">
+      <div class="text-2xl font-bold text-blue-400">Mi Portafolio</div>
+      <ul class="flex space-x-4">
+        <li><a href="#home" class="text-white hover:text-blue-400">Inicio</a></li>
+        <li><a href="#about" class="text-white hover:text-blue-400">Sobre mí</a></li>
+        <li><a href="#projects" class="text-white hover:text-blue-400">Proyectos</a></li>
+        <li><a href="#contact" class="text-white hover:text-blue-400">Contacto</a></li>
+      </ul>
+    </nav>
+
+  </header>
+
+
   <section id="home" class="reveal">
     <!-- Welcome Section -->
     <main id="welcome" class="z-10 relative flex h-screen w-full items-center justify-center">
@@ -19,41 +34,77 @@
         Bienvenido a mi Portafolio
       </h1>
     </main>
-
-   
     <canvas id="sprite" class="absolute top-0 left-0 w-full h-full z-0 pointer-events-none"></canvas>
   </section>
- 
-
-<section id="about"
-class="w-screen min-h-screen flex flex-col items-center justify-center bg-gray-900 text-white p-8">
-
-<div class="flex flex-col md:flex-row items-center gap-8">
-  <!-- Picture -->
-  <div class="w-64 h-64 rounded-full overflow-hidden shadow-lg reveal reveal-left">
-    <img src="img/5930147.png" alt="Your Picture" class="w-full h-full object-cover">
-  </div>
-
-  <!-- Description -->
-  <div class="text-center md:text-left max-w-lg reveal reveal-right">
-    <h2 class="text-3xl font-bold mb-4">Sobre mí</h2>
-    <p class="text-lg leading-relaxed">
-      Hola! Mi nombre es Juan Sebastian Gutierrez Fuentes, soy programador Fullstack, especializado en Java,
-      JavaScript, Python, MySQL, HTML y CSS. Actualmente estudio en Campuslands, donde he desarrollado tanto
-       mis habilidades técnicas como mis habilidades blandas. Me interesa aprender constantemente y 
-       disfruto enfrentarme a nuevos retos que impulsen mi crecimiento profesional.
-  </div>
-</div>
 
 
-<div class="mt-8 w-full max-w-2xl reveal reveal-up">
-  <video controls class="w-full rounded-lg shadow-lg">
-    <source src="video/your-video.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-  </video>
-</div>
-</section>
+  <section id="about" class="w-screen min-h-screen flex flex-col 
+  items-center justify-center bg-gray-900 text-white p-8">
 
+    <div class="flex flex-col md:flex-row items-center gap-8">
+      <!-- Picture -->
+      <div class="w-64 h-64 rounded-full overflow-hidden shadow-lg reveal reveal-left">
+        <img src="img/5930147.png" alt="Your Picture" class="w-full h-full object-cover">
+      </div>
+
+      <!-- Description -->
+      <div class="text-center md:text-left max-w-lg reveal reveal-right">
+        <h2 class="text-3xl font-bold mb-4">Sobre mí</h2>
+        <p class="text-lg leading-relaxed">
+          Hola! Mi nombre es Juan Sebastian Gutierrez Fuentes, soy programador Fullstack, especializado en Java,
+          JavaScript, Python, MySQL, HTML y CSS. Actualmente estudio en Campuslands, donde he desarrollado tanto
+          mis habilidades técnicas como mis habilidades blandas. Me interesa aprender constantemente y
+          disfruto enfrentarme a nuevos retos que impulsen mi crecimiento profesional.
+      </div>
+    </div>
+
+
+    <div class="mt-8 w-full max-w-2xl reveal reveal-up">
+      <video controls class="w-full rounded-lg shadow-lg">
+        <source src="video/your-video.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+  </section>
+    <section id="projects" class="w-screen min-h-screen flex flex-col items-center justify-center bg-gray-900 text-white p-8">
+      <h2 class="text-3xl font-bold mb-4">Proyectos</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Proyecto 1 -->
+          <a id="projects-img" href="https://github.com/SebaGut2103/Proyecto.git" target="_blank" class="bg-gray-800 p-4 rounded-lg shadow-lg reveal reveal-left hover:scale-105 transition-transform">
+              <img src="img/Python-Emblem.png" alt="Proyecto 1" class="w-full h-40 object-cover  rounded-lg mb-4">
+              <h3 class="text-xl font-bold mb-2">Proyecto 1</h3>
+              <p class="text-lg">Descripción del proyecto 1.</p>
+          </a>
+  
+          <!-- Proyecto 2 -->
+          <a  id="projects-img" href="https://github.com/SebaGut2103/Fotos_Bodas_webs.git" target="_blank" class="bg-gray-800 p-4 rounded-lg shadow-lg reveal reveal-right hover:scale-105 transition-transform">
+              <img src="img/WeddingWeb.png" alt="Proyecto 2" class="w-full h-40 object-cover rounded-lg mb-4">
+              <h3 class="text-xl font-bold mb-2">Proyecto 2</h3>
+              <p class="text-lg">Descripción del proyecto 2.</p>
+          </a>
+  
+          <!-- Proyecto 3 -->
+          <a id="projects-img" href="https://github.com/EmmanuelSan01/Ani-Rank.git" target="_blank" class="bg-gray-800 p-4 rounded-lg shadow-lg reveal reveal-up hover:scale-105 transition-transform">
+              <img src="img/Ani-Rank.png"Proyecto 3" class="w-full h-40 object-cover rounded-lg mb-4">
+              <h3 class="text-xl font-bold mb-2">Proyecto 3</h3>
+              <p class="text-lg">Descripción del proyecto 3.</p>
+          </a>
+  
+          <!-- Proyecto 4 -->
+          <a id="projects-img" href="https://github.com/SebaGut2103/Hotel-el-rincon-de-Camila.git" target="_blank" class="bg-gray-800 p-4 rounded-lg shadow-lg reveal reveal-left hover:scale-105 transition-transform">
+              <img src="img/Hotel.png" alt="Proyecto 4" class="w-full h-40 object-cover rounded-lg mb-4">
+              <h3 class="text-xl font-bold mb-2">Proyecto 4</h3>
+              <p class="text-lg">Descripción del proyecto 4.</p>
+          </a>
+  
+          <!-- Proyecto 5 -->
+          <a id="projects-img" href="https://github.com/SebaGut2103/Los-Ambientales_MySQL.git" target="_blank" class="bg-gray-800 p-4 rounded-lg shadow-lg reveal reveal-right hover:scale-105 transition-transform">
+              <img src="img/mysql-5-logo-png-transparent.png" alt="Proyecto 5" class="w-full h-40 object-cover rounded-lg mb-4">
+              <h3 class="text-xl font-bold mb-2">Proyecto 5</h3>
+              <p class="text-lg">Descripción del proyecto 5.</p>
+          </a>
+      </div>
+  </section>
 
   <script src="js/index.js"></script>
 </body>

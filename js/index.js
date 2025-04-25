@@ -1,3 +1,5 @@
+// Sprite Animation
+
 const canvas = document.getElementById("sprite");
 const ctx = canvas.getContext("2d");
 
@@ -43,6 +45,7 @@ character.onload = function () {
   setInterval(draw, 100);
 };
 
+// Scroll Animation
 const reveals = document.querySelectorAll(".reveal");
 
 const observer = new IntersectionObserver((entries) => {
